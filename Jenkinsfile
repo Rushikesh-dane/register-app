@@ -1,4 +1,4 @@
-Pipeline{
+pipeline{
     agent{label 'Jenkins-agent'}
     tools{
         jdk 'Java17'
@@ -27,7 +27,7 @@ Pipeline{
 
         stage("Test Application"){
             steps{
-                sh "mvn test"
+                sh 'mvn test'
             }
         }
 
