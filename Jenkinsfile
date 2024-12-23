@@ -35,7 +35,7 @@ pipeline {
            steps {
 	           script {
 		        withSonarQubeEnv(credentialsId: 'Analyse') { 
-                        sh "mvn sonar:sonar"
+                        sh "mvn clear verify sonar:sonar"
 		        }
 	           }	
            }
