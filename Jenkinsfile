@@ -34,7 +34,7 @@ pipeline {
       stage("SonarQube Analysis"){
            steps {
 	           script {
-		        withSonarQubeEnv(credentialsId: 'Analyse') { 
+		        withSonarQubeEnv(credentialsId: 'New_Token') { 
                         sh "mvn clear verify sonar:sonar"
 		        }
 	           }	
