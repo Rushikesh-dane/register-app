@@ -33,7 +33,7 @@ pipeline {
         steps{
             script{
                 withSonarQubeEnv(credentialsId: 'SonarQube-Secrete'){
-                    sh "mvn sonar:sonar -Dsonar.token=sqa_27e1197e9f95bece4111315018fd168951c31e85"
+                    sh "mvn sonar:sonar"
  
              }
             }
