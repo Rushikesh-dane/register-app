@@ -3,7 +3,7 @@ pipeline {
     tools {
         jdk 'Java17'
         maven 'Maven3'
-	SonarQube Scanner 'SonarQube-Scanner'
+	SonarQube 'SonarQube-Scanner'
     }
     stages{
         stage("Cleanup Workspace"){
