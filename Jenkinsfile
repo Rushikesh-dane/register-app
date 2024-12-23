@@ -29,15 +29,14 @@ pipeline {
                  sh "mvn test"
            }
        }
-       stage( "SonarQube Analysis"){
-        steps{
-            script{
-                withSonarQubeEnv(credentialsId: 'SonarQube-Secrete'){
-                    sh "mvn org.sonarsource.scanner.maven:sonar-maven-plugin:4.0.0.4121:sonar"
- 
-             }
-            }
-        }
+      stage("SonarQube Analysis"){
+           steps {
+	           script {
+		        withSonarQubeEnv(credentialsId: 'SonarQube-Secrete') { 
+                        sh "mvn sonar:sonar"
+		        }
+	           }	
+           }
        }
     }
 }
